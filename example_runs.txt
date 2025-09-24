@@ -1,0 +1,69 @@
+# Ejecución 1:
+python route_planner.py --from "Portal Norte" --to "Portal Sur"
+
+Ruta óptima de 'Portal Norte' a 'Portal Sur' (tiempo estimado: 57 minutos):
+
+Portal Norte(A) -> Calle 170(A) -> Calle 145(A) -> Calle 127(A) -> Calle 100(A)
+-> Calle 100(B) -> Calle 85(B) -> Calle 72(B) -> U. Nacional(B) -> U. Nacional(C
+) -> Zona T(C) -> Calle 57(C) -> Portal Sur(C)
+
+Instrucciones:
+ - Tomar línea A desde 'Portal Norte' hasta 'Calle 170'
+ - Tomar línea A desde 'Calle 170' hasta 'Calle 145'
+ - Tomar línea A desde 'Calle 145' hasta 'Calle 127'
+ - Tomar línea A desde 'Calle 127' hasta 'Calle 100'
+ - En 'Calle 100' cambiar de la línea A a la línea B (transbordo)
+ - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
+ - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
+ - Tomar línea B desde 'Calle 72' hasta 'U. Nacional'
+ - En 'U. Nacional' cambiar de la línea B a la línea C (transbordo)
+ - Tomar línea C desde 'U. Nacional' hasta 'Zona T'
+ - Tomar línea C desde 'Zona T' hasta 'Calle 57'
+ - Tomar línea C desde 'Calle 57' hasta 'Portal Sur'
+
+
+# Ejecución 2:
+python route_planner.py --from "Calle 100" --to "U. Nacional"
+
+Ruta óptima de 'Calle 100' a 'U. Nacional' (tiempo estimado: 15 minutos):
+
+Calle 100(B) -> Calle 85(B) -> Calle 72(B) -> U. Nacional(B)
+
+Instrucciones:
+ - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
+ - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
+ - Tomar línea B desde 'Calle 72' hasta 'U. Nacional'
+
+# Ejecución 3:
+python route_planner.py --from "Calle 100" --to "Portal Sur"
+
+Ruta óptima de 'Calle 100' a 'Portal Sur' (tiempo estimado: 36 minutos):
+
+Calle 100(B) -> Calle 85(B) -> Calle 72(B) -> U. Nacional(B) -> U. Nacional(C) -
+> Zona T(C) -> Calle 57(C) -> Portal Sur(C)
+
+Instrucciones:
+ - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
+ - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
+ - Tomar línea B desde 'Calle 72' hasta 'U. Nacional'
+ - En 'U. Nacional' cambiar de la línea B a la línea C (transbordo)
+ - Tomar línea C desde 'U. Nacional' hasta 'Zona T'
+ - Tomar línea C desde 'Zona T' hasta 'Calle 57'
+ - Tomar línea C desde 'Calle 57' hasta 'Portal Sur'
+
+# Ejecución 4:
+python route_planner.py --from "Portal Norte" --to "Calle 72"
+
+Ruta óptima de 'Portal Norte' a 'Calle 72' (tiempo estimado: 30 minutos):
+
+Portal Norte(A) -> Calle 170(A) -> Calle 145(A) -> Calle 127(A) -> Calle 100(A)
+-> Calle 100(B) -> Calle 85(B) -> Calle 72(B)
+
+Instrucciones:
+ - Tomar línea A desde 'Portal Norte' hasta 'Calle 170'
+ - Tomar línea A desde 'Calle 170' hasta 'Calle 145'
+ - Tomar línea A desde 'Calle 145' hasta 'Calle 127'
+ - Tomar línea A desde 'Calle 127' hasta 'Calle 100'
+ - En 'Calle 100' cambiar de la línea A a la línea B (transbordo)
+ - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
+ - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
