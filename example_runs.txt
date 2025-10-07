@@ -1,69 +1,19 @@
-# Ejecución 1:
-python route_planner.py --from "Portal Norte" --to "Portal Sur"
+Ejemplo de predicciones:
+Input: {'origin': 'Calle 100', 'dest': 'Calle 85', 'hour': 9, 'day_of_week': 4, 'is_peak': 1, 'distance_km': 0.83, 'stops_apart': 1, 'num_transfers': 0, 'origin_line': 'A', 'dest_line': 'B'}
+Predicci�n (min): 7.7
 
-Ruta óptima de 'Portal Norte' a 'Portal Sur' (tiempo estimado: 57 minutos):
+Input: {'origin': 'Portal Sur', 'dest': 'Calle 145', 'hour': 20, 'day_of_week': 6, 'is_peak': 0, 'distance_km': 5.9, 'stops_apart': 8, 'num_transfers': 0, 'origin_line': 'D', 'dest_line': 'A'}
+Predicci�n (min): 36.81
 
-Portal Norte(A) -> Calle 170(A) -> Calle 145(A) -> Calle 127(A) -> Calle 100(A)
--> Calle 100(B) -> Calle 85(B) -> Calle 72(B) -> U. Nacional(B) -> U. Nacional(C
-) -> Zona T(C) -> Calle 57(C) -> Portal Sur(C)
+Input: {'origin': 'Calle 145', 'dest': 'Zona T', 'hour': 23, 'day_of_week': 6, 'is_peak': 0, 'distance_km': 4.72, 'stops_apart': 6, 'num_transfers': 0, 'origin_line': 'B', 'dest_line': 'B'}
+Predicci�n (min): 26.2
 
-Instrucciones:
- - Tomar línea A desde 'Portal Norte' hasta 'Calle 170'
- - Tomar línea A desde 'Calle 170' hasta 'Calle 145'
- - Tomar línea A desde 'Calle 145' hasta 'Calle 127'
- - Tomar línea A desde 'Calle 127' hasta 'Calle 100'
- - En 'Calle 100' cambiar de la línea A a la línea B (transbordo)
- - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
- - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
- - Tomar línea B desde 'Calle 72' hasta 'U. Nacional'
- - En 'U. Nacional' cambiar de la línea B a la línea C (transbordo)
- - Tomar línea C desde 'U. Nacional' hasta 'Zona T'
- - Tomar línea C desde 'Zona T' hasta 'Calle 57'
- - Tomar línea C desde 'Calle 57' hasta 'Portal Sur'
+Input: {'origin': 'Zona T', 'dest': 'U. Nacional', 'hour': 19, 'day_of_week': 3, 'is_peak': 1, 'distance_km': 1.1, 'stops_apart': 1, 'num_transfers': 0, 'origin_line': 'D', 'dest_line': 'A'}
+Predicci�n (min): 7.56
 
+Input: {'origin': 'Calle 100', 'dest': 'Portal Sur', 'hour': 5, 'day_of_week': 6, 'is_peak': 0, 'distance_km': 5.13, 'stops_apart': 6, 'num_transfers': 0, 'origin_line': 'B', 'dest_line': 'D'}
+Predicci�n (min): 28.53
 
-# Ejecución 2:
-python route_planner.py --from "Calle 100" --to "U. Nacional"
+Input: {'origin': 'U. Nacional', 'dest': 'Calle 127', 'hour': 6, 'day_of_week': 4, 'is_peak': 0, 'distance_km': 2.53, 'stops_apart': 4, 'num_transfers': 0, 'origin_line': 'D', 'dest_line': 'B'}
+Predicci�n (min): 17.73
 
-Ruta óptima de 'Calle 100' a 'U. Nacional' (tiempo estimado: 15 minutos):
-
-Calle 100(B) -> Calle 85(B) -> Calle 72(B) -> U. Nacional(B)
-
-Instrucciones:
- - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
- - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
- - Tomar línea B desde 'Calle 72' hasta 'U. Nacional'
-
-# Ejecución 3:
-python route_planner.py --from "Calle 100" --to "Portal Sur"
-
-Ruta óptima de 'Calle 100' a 'Portal Sur' (tiempo estimado: 36 minutos):
-
-Calle 100(B) -> Calle 85(B) -> Calle 72(B) -> U. Nacional(B) -> U. Nacional(C) -
-> Zona T(C) -> Calle 57(C) -> Portal Sur(C)
-
-Instrucciones:
- - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
- - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
- - Tomar línea B desde 'Calle 72' hasta 'U. Nacional'
- - En 'U. Nacional' cambiar de la línea B a la línea C (transbordo)
- - Tomar línea C desde 'U. Nacional' hasta 'Zona T'
- - Tomar línea C desde 'Zona T' hasta 'Calle 57'
- - Tomar línea C desde 'Calle 57' hasta 'Portal Sur'
-
-# Ejecución 4:
-python route_planner.py --from "Portal Norte" --to "Calle 72"
-
-Ruta óptima de 'Portal Norte' a 'Calle 72' (tiempo estimado: 30 minutos):
-
-Portal Norte(A) -> Calle 170(A) -> Calle 145(A) -> Calle 127(A) -> Calle 100(A)
--> Calle 100(B) -> Calle 85(B) -> Calle 72(B)
-
-Instrucciones:
- - Tomar línea A desde 'Portal Norte' hasta 'Calle 170'
- - Tomar línea A desde 'Calle 170' hasta 'Calle 145'
- - Tomar línea A desde 'Calle 145' hasta 'Calle 127'
- - Tomar línea A desde 'Calle 127' hasta 'Calle 100'
- - En 'Calle 100' cambiar de la línea A a la línea B (transbordo)
- - Tomar línea B desde 'Calle 100' hasta 'Calle 85'
- - Tomar línea B desde 'Calle 85' hasta 'Calle 72'
